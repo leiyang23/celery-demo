@@ -22,5 +22,14 @@ CELERYD_PID_FILE="/home/celery/%n.pid"
 CELERYD_USER="root"
 CELERYD_GROUP="root"
 
-
 CELERY_CREATE_DIRS=1
+
+
+
+###### celery beat ########
+CELERYBEAT_CHDIR="/home/celery-demo/"
+
+CELERYBEAT_OPTS="--schedule=/home/celery/celerybeat-schedule"
+
+CELERYBEAT_USER="root"
+CELERYBEAT_GROUP="root"

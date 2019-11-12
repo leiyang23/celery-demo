@@ -88,7 +88,7 @@ _config_sanity() {
     fi
 }
 
-scripts="./config_beat"
+scripts="./config"
 
 #if test -f /etc/default/celeryd; then
 #    scripts="/etc/default/celeryd"
@@ -106,7 +106,7 @@ scripts="./config_beat"
 echo "Using configuration: $scripts"
 
 CELERY_BIN=${CELERY_BIN:-"celery"}
-DEFAULT_USER="root"
+DEFAULT_USER="celery"
 DEFAULT_PID_FILE="/var/run/celery/beat.pid"
 DEFAULT_LOG_FILE="/var/log/celery/beat.log"
 DEFAULT_LOG_LEVEL="INFO"

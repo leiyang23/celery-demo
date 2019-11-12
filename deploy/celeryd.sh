@@ -64,7 +64,7 @@ else
 fi
 
 #CELERY_DEFAULTS=${CELERY_DEFAULTS:-"$CELERY_CONFIG_DIR/${SCRIPT_NAME}"}
-CELERY_DEFAULTS="./config_celeryd"
+CELERY_DEFAULTS="./config"
 # Make sure executable configuration script is owned by root
 _config_sanity() {
     local path="$1"
