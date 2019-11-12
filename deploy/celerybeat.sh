@@ -88,20 +88,20 @@ _config_sanity() {
     fi
 }
 
-scripts=""
+scripts="./config_beat"
 
-if test -f /etc/default/celeryd; then
-    scripts="/etc/default/celeryd"
-    _config_sanity /etc/default/celeryd
-    . /etc/default/celeryd
-fi
-
-EXTRA_CONFIG="/etc/default/${SCRIPT_NAME}"
-if test -f "$EXTRA_CONFIG"; then
-    scripts="$scripts, $EXTRA_CONFIG"
-    _config_sanity "$EXTRA_CONFIG"
-    . "$EXTRA_CONFIG"
-fi
+#if test -f /etc/default/celeryd; then
+#    scripts="/etc/default/celeryd"
+#    _config_sanity /etc/default/celeryd
+#    . /etc/default/celeryd
+#fi
+#
+#EXTRA_CONFIG="/etc/default/${SCRIPT_NAME}"
+#if test -f "$EXTRA_CONFIG"; then
+#    scripts="$scripts, $EXTRA_CONFIG"
+#    _config_sanity "$EXTRA_CONFIG"
+#    . "$EXTRA_CONFIG"
+#fi
 
 echo "Using configuration: $scripts"
 

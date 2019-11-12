@@ -1,0 +1,8 @@
+CELERY_BIN="/usr/local/python3/bin/"
+
+CELERY_APP="Scheduler"
+
+CELERYBEAT_CHDIR="/home/celery-demo/"
+
+# Extra arguments to celerybeat
+CELERYBEAT_OPTS="--schedule=/home/celery/celerybeat-schedule"
