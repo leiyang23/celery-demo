@@ -89,6 +89,7 @@ _config_sanity() {
 }
 
 scripts="./config"
+_config_sanity $scripts
 
 #if test -f /etc/default/celeryd; then
 #    scripts="/etc/default/celeryd"
