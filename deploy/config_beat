@@ -6,3 +6,6 @@ CELERYBEAT_CHDIR="/home/celery-demo/"
 
 # Extra arguments to celerybeat
 CELERYBEAT_OPTS="--schedule=/home/celery/celerybeat-schedule"
+
+CELERYBEAT_USER="root"
+CELERYBEAT_GROUP="root"
