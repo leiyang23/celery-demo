@@ -1,4 +1,4 @@
-CELERY_BIN="/usr/local/python3/bin/"
+CELERY_BIN="/usr/local/python3/bin/celery"
 
 CELERY_APP="Scheduler"
 
