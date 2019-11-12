@@ -4,7 +4,7 @@ CELERY_BIN="/usr/local/python3/bin/celery"
 
 CELERY_APP="Scheduler.celery:app"
 
-CELERYBEAT_CHDIR="/home/celery-demo/"
+CELERYD_CHDIR="/home/celery-demo/"
 
 # Extra command-line arguments to the worker
 CELERYD_OPTS="--time-limit=300 --concurrency=8"
