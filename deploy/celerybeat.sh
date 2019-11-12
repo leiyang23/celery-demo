@@ -89,7 +89,8 @@ _config_sanity() {
 }
 
 scripts="./config"
-_config_sanity $scripts
+# 读取配置脚本
+_config_sanity /home/celery-demo/deploy/config
 
 #if test -f /etc/default/celeryd; then
 #    scripts="/etc/default/celeryd"
