@@ -1,6 +1,6 @@
 CELERY_BIN="/usr/local/python3/bin/celery"
 
-CELERY_APP="Scheduler"
+CELERY_APP="Scheduler.celery:app"
 
 CELERYBEAT_CHDIR="/home/celery-demo/"
 
