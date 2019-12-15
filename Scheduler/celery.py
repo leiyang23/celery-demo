@@ -11,7 +11,7 @@ app = Celery("Scheduler",
 app.conf.beat_schedule = {
     "weather": {
         'task': "Scheduler.weather_predict.tasks.weather",
-        'schedule': crontab(minute=0, hour="20,"),
+        'schedule': crontab(minute=0, hour="20"),
         'args': ()
     }
 }

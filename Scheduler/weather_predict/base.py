@@ -34,7 +34,7 @@ def tomorrow_weather(address: str):
 
     casts = data["forecasts"][0]['casts']
 
-    temp_change = int(casts[1]['dayweather']) - int(casts[0]['dayweather'])
+    temp_change = int(casts[1]['daytemp']) - int(casts[0]['daytemp'])
     weather = casts[1]['dayweather']
     logger.debug(weather)
 
@@ -59,5 +59,3 @@ def get_adcode(address: "结构化地址信息"):
         return False, data['info']
 
     return True, data['geocodes'][0]["adcode"]
-
-tomorrow_weather("雨花台")
