@@ -1,12 +1,17 @@
 from celery import Celery
+from celery.schedules import crontab
+from Scheduler.settings import redis_conf
 
-app = Celery("Scheduler", broker="redis://127.0.0.1:6379/1", backend="redis://127.0.0.1:6379/2",
-             include=['Scheduler.weather_predict.tasks','Scheduler.alarm.tasks'])
+
+app = Celery("Scheduler",
+             broker=f"redis://{redis_conf['host']}:{redis_conf['port']}/1",
+             backend=f"redis://{redis_conf['host']}:{redis_conf['port']}/2",
+             include=['Scheduler.weather_predict.tasks', 'Scheduler.alarm.tasks'])
 
 app.conf.beat_schedule = {
-    "add-per-30s": {
+    "weather": {
         'task': "Scheduler.weather_predict.tasks.weather",
-        'schedule': 30,
+        'schedule': crontab(minute=0, hour="20,"),
         'args': ()
     }
 }
