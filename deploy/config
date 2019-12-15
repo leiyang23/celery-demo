@@ -35,3 +35,6 @@ CELERYBEAT_OPTS="--schedule=/home/celery-demo/celery-runtime/celerybeat-schedule
 
 CELERYBEAT_USER="root"
 CELERYBEAT_GROUP="root"
+
+CELERYBEAT_LOG_FILE="/home/celery-demo/celery-runtime/beat.log"
+CELERYBEAT_PID_FILE="/home/celery-demo/celery-runtime/beat.pid"
